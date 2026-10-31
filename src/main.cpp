@@ -8,14 +8,16 @@ void setup() {
   digitalWrite(2, LOW);
 
   Serial.begin(115200);
-  set_microros_serial_transports(Serial);
   delay(2000);
 
-  Wire.begin();
+  Wire.begin(DEPTH_SENSOR_SDA_PIN, DEPTH_SENSOR_SCL_PIN);
+  Wire.setClock(100000);
 
   #ifndef NO_DEPTH_SENSOR
     initializeDepthSensor();
   #endif
+
+  set_microros_serial_transports(Serial);
 
   initialiseThrusters();     // Arms ESCs at neutral (1500 µs)
   initializeComms();         // Blocks until micro-ROS agent handshakes
