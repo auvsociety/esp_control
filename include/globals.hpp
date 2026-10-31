@@ -2,7 +2,7 @@
 #include <Arduino.h>
 
 // Comment this out when a real MS5837 depth sensor is connected
-#define NO_DEPTH_SENSOR
+// #define NO_DEPTH_SENSOR
 
 #define NUMBER_OF_THRUSTERS 7
 

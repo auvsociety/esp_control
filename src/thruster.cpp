@@ -1,7 +1,7 @@
 #include "thruster.hpp"
 
 Servo    g_thrusters[NUMBER_OF_THRUSTERS];
-int32_t  g_thruster_pins[NUMBER_OF_THRUSTERS] = {32, 25, 14, 13, 15, 4, 5};
+int32_t  g_thruster_pins[NUMBER_OF_THRUSTERS] = {15, 2, 16, 5, 19, 23, 27};
 
 uint32_t g_last_thrust_time_ms = 0;
 
